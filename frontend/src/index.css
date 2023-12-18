@@ -1,0 +1,105 @@
+:root {
+  --font-family: "Roboto", "Arial", sans-serif;
+  --line-height: 1.6;
+  --font-weight: 400;
+  --primary-color: #d35400; /* Pumpkin Orange */
+  --background-color: #2980b9; /* Dark Cerulean Blue */
+  --accent-color: #c0392b; /* Dark Red */
+  --secondary-color: #9b59b6; /* Amethyst Purple */
+
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+
+  color-scheme: light dark;
+  color: var(--primary-color);
+  background: linear-gradient(
+    to bottom,
+    #9b59b6,
+    #2980b9
+  ); /* Amethyst Purple to Dark Cerulean Blue Gradient */
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover {
+  color: #c0392b; /* Darker Red */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 300px;
+  min-height: 100vh;
+}
+
+.App-header {
+  width: 100%;
+  height: 100vh;
+}
+
+.currency-selector {
+  background: linear-gradient(
+    to bottom,
+    #9b59b6,
+    #c0392b
+  ); /* Amethyst Purple to Dark Red Gradient */
+  color: #ecf0f1; /* Light Blue Grayish */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.currency-selector form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.currency-selector label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.currency-selector button {
+  color: #ecf0f1; /* Light Blue Grayish */
+  background: linear-gradient(
+    to right,
+    #c0392b,
+    #d35400
+  ); /* Dark Red to Pumpkin Orange Gradient */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.currency-selector input[type="radio"] {
+  accent-color: #d35400; /* Pumpkin Orange */
+}
+
+.currency-selector button:hover {
+  background: linear-gradient(
+    to right,
+    #d35400,
+    #9b59b6
+  ); /* Pumpkin Orange to Amethyst Purple Gradient */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #333;
+    background: linear-gradient(
+      to bottom,
+      #ecf0f1,
+      #bdc3c7
+    ); /* Light Blue Grayish Gradient */
+  }
+}
